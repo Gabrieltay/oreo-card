@@ -13,8 +13,6 @@ export type GalleryPhoto = {
 
 export type ReelItem = {
   url: string;
-  thumbnail: string;
-  caption: string;
 };
 
 export type SocialLink = {
@@ -53,11 +51,8 @@ export const oreo = {
   ] satisfies GalleryPhoto[],
 
   reels: [
-    {
-      url: "https://www.instagram.com/reel/CYn1GucqHNo/",
-      thumbnail: "",
-      caption: "Oreo showing off her best dance moves 💃",
-    },
+    { url: "https://www.instagram.com/reel/CYn1GucqHNo/" },
+    { url: "https://www.instagram.com/tv/CYZWaqcKdho/" },
   ] satisfies ReelItem[],
 
   about:

@@ -1,9 +1,9 @@
 "use client";
 
 import { useRef } from "react";
-import Image from "next/image";
-import { ChevronLeft, ChevronRight, ImagePlus, Play } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import FadeIn from "./FadeIn";
+import InstagramEmbed from "./InstagramEmbed";
 import { oreo } from "@/content/oreo";
 
 export default function Reels() {
@@ -13,7 +13,7 @@ export default function Reels() {
     const node = scrollerRef.current;
     if (!node) return;
     const card = node.querySelector<HTMLElement>("[data-reel-card]");
-    const amount = (card?.offsetWidth ?? 208) + 16;
+    const amount = (card?.offsetWidth ?? 340) + 16;
     node.scrollBy({ left: amount * direction, behavior: "smooth" });
   };
 
@@ -39,43 +39,11 @@ export default function Reels() {
             <FadeIn
               key={reel.url}
               delay={i * 60}
-              className="shrink-0 snap-center"
+              className="w-[326px] shrink-0 snap-center"
             >
-              <a
-                data-reel-card
-                href={reel.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`Watch on Instagram: ${reel.caption}`}
-                className="group relative block aspect-[9/16] w-44 overflow-hidden rounded-2xl bg-cream-dark shadow-sm shadow-cocoa/5 sm:w-52"
-              >
-                {reel.thumbnail ? (
-                  <Image
-                    src={reel.thumbnail}
-                    alt={reel.caption}
-                    fill
-                    sizes="(max-width: 640px) 176px, 208px"
-                    className="object-cover transition duration-300 group-hover:scale-105"
-                  />
-                ) : (
-                  <div className="flex h-full w-full flex-col items-center justify-center gap-2 bg-gradient-to-br from-lavender/50 to-blush/50 text-cocoa-light">
-                    <ImagePlus size={22} />
-                    <span className="px-3 text-center text-xs">
-                      Add a thumbnail
-                    </span>
-                  </div>
-                )}
-
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-cocoa/70 via-transparent to-transparent" />
-
-                <div className="absolute top-3 right-3 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-cocoa transition group-hover:scale-105">
-                  <Play size={14} fill="currentColor" />
-                </div>
-
-                <p className="absolute inset-x-3 bottom-3 line-clamp-2 text-sm font-medium text-white">
-                  {reel.caption}
-                </p>
-              </a>
+              <div data-reel-card>
+                <InstagramEmbed url={reel.url} />
+              </div>
             </FadeIn>
           ))}
         </div>
