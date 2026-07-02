@@ -17,7 +17,7 @@ export default function Reels() {
   if (count === 0) return null;
 
   return (
-    <section className="mx-auto max-w-3xl px-6 py-16">
+    <section className="mx-auto w-full max-w-3xl px-6 py-16">
       <FadeIn>
         <h2 className="font-heading text-center text-3xl font-bold text-cocoa">
           Reels
