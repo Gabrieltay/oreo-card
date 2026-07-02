@@ -31,8 +31,8 @@ export const oreo = {
   quickFacts: [
     { label: "Breed", value: "Holland Lop", icon: "PawPrint" },
     { label: "Birthday", value: "16 September", icon: "Cake" },
-    { label: "Weight", value: "1.8 kg", icon: "Scale" },
-    { label: "Favorite Treat", value: "Dried papaya", icon: "Carrot" },
+    { label: "Weight", value: "1.4 kg", icon: "Scale" },
+    { label: "Favorite Treat", value: "Apple & romaine lettuce", icon: "Carrot" },
     { label: "Personality", value: "Sweet, curious & food-motivated", icon: "Heart" },
     { label: "Home Base", value: "Singapore 🇸🇬", icon: "MapPin" },
   ] satisfies QuickFact[],
