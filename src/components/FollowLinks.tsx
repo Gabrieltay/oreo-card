@@ -1,5 +1,6 @@
 import type { ComponentType } from "react";
-import { Link as LinkIcon, Mail, Globe } from "lucide-react";
+import { Link as LinkIcon, Mail, Globe, QrCode } from "lucide-react";
+import NextLink from "next/link";
 import { InstagramIcon, FacebookIcon, YoutubeIcon } from "./icons";
 import FadeIn from "./FadeIn";
 import { oreo, type SocialLink } from "@/content/oreo";
@@ -46,6 +47,16 @@ export default function FollowLinks() {
             );
           })}
         </div>
+      </FadeIn>
+
+      <FadeIn delay={140}>
+        <NextLink
+          href="/card"
+          className="mt-6 inline-flex items-center gap-2 rounded-full border-2 border-cocoa/20 px-6 py-3 text-sm font-semibold text-cocoa transition hover:border-cocoa/40"
+        >
+          <QrCode size={18} />
+          Digital namecard
+        </NextLink>
       </FadeIn>
     </section>
   );

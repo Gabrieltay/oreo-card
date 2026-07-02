@@ -19,7 +19,7 @@ export type SocialLink = {
 
 export const oreo = {
   name: "Oreo",
-  fullName: "Oreo the Sweet Bun",
+  fullName: "Oreothesweetbun",
   pronouns: "she/her",
   tagline: "Professional treat inspector 🐰",
   location: "Singapore",
