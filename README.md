@@ -22,13 +22,16 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Editing content
 
-Everything you'd want to change — name, tagline, quick facts, gallery photos, story, and social links — lives in `src/content/oreo.ts`. Drop real photos into `public/photos/` and point the config entries at them.
+Everything you'd want to change — name, tagline, quick facts, gallery photos, reels, story, and social links — lives in `src/content/oreo.ts`. Drop real photos into `public/photos/` and point the config entries at them.
+
+To add a reel, add an entry to the `reels` array with the Instagram reel URL and a caption. Instagram blocks thumbnail scraping, so drop a screenshot into `public/photos/` and point `thumbnail` at it — leave it as `""` to show a placeholder until you do. Cards always link out to the real reel on Instagram.
 
 ## Structure
 
 - `src/components/Hero.tsx` — photo, name, tagline
 - `src/components/QuickFacts.tsx` — breed/birthday/weight/etc. grid
 - `src/components/Gallery.tsx` — photo grid with a click-to-open lightbox
+- `src/components/Reels.tsx` — reel carousel that links out to Instagram
 - `src/components/About.tsx` — story paragraph and achievements
 - `src/components/FollowLinks.tsx` — social link buttons
 

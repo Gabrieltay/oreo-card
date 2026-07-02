@@ -11,6 +11,12 @@ export type GalleryPhoto = {
   alt: string;
 };
 
+export type ReelItem = {
+  url: string;
+  thumbnail: string;
+  caption: string;
+};
+
 export type SocialLink = {
   label: string;
   href: string;
@@ -45,6 +51,14 @@ export const oreo = {
     { src: "", alt: "Add a photo of Oreo's award-winning look" },
     { src: "", alt: "Add a photo of Oreo with friends" },
   ] satisfies GalleryPhoto[],
+
+  reels: [
+    {
+      url: "https://www.instagram.com/reel/CYn1GucqHNo/",
+      thumbnail: "",
+      caption: "Oreo showing off her best dance moves 💃",
+    },
+  ] satisfies ReelItem[],
 
   about:
     "Oreo is the sweetest no. 1 bunny — a black-and-white Holland Lop with a heart-shaped nose marking and a talent for making everyone she meets fall in love. She spends her days inspecting treats, supervising nap schedules, and occasionally winning Best in Show. When she's not busy being adorable, you can find her flopped over in a sunbeam, plotting her next snack heist.",
