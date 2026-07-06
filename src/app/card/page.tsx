@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import NameCard from "@/components/NameCard";
 import { oreo } from "@/content/oreo";
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://oreothesweetbun.vercel.app";
+const baseUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://oreo-card.vercel.app";
+const siteUrl = `${baseUrl.replace(/\/$/, "")}/card`;
 
 const title = `${oreo.fullName}'s Digital Namecard 🐰`;
 const description = `Scan the QR code to find all of ${oreo.fullName}'s links in one place.`;
